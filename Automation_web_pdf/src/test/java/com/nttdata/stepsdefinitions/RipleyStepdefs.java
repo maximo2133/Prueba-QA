@@ -1,6 +1,5 @@
 package com.nttdata.stepsdefinitions;
 
-import com.nttdata.steps.InventorySteps;
 import com.nttdata.steps.RipleyStep;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -9,7 +8,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -39,9 +37,6 @@ public class RipleyStepdefs {
     @After
     public void quitDriver(){
         driver.quit();
-    }
-    private InventorySteps inventorySteps(WebDriver driver){
-        return new InventorySteps(driver);
     }
 
     @Given("el usuario está en la página de inicio de Ripley")
